@@ -12,23 +12,17 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html, body {
-      width: 100%;
-      overflow-x: hidden;
-    }
+    html, body { width: 100%; overflow-x: hidden; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 20% 10%, rgba(0, 122, 255, 0.18), transparent 60%),
-                  radial-gradient(900px 600px at 80% 30%, rgba(175, 82, 222, 0.14), transparent 55%),
-                  radial-gradient(900px 700px at 40% 90%, rgba(52, 199, 89, 0.12), transparent 60%),
-                  #f6f7fb;
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(0, 122, 255, 0.18), transparent 60%),
+        radial-gradient(900px 600px at 80% 30%, rgba(175, 82, 222, 0.14), transparent 55%),
+        radial-gradient(900px 700px at 40% 90%, rgba(52, 199, 89, 0.12), transparent 60%),
+        #f6f7fb;
       color: #0b0b0f;
       line-height: 1.6;
       word-break: break-word;
@@ -54,7 +48,6 @@
 
     header {
       padding: 80px 16px 32px;
-      max-width: 100%;
       display: flex;
       justify-content: center;
     }
@@ -73,16 +66,10 @@
 
     .hero-content h1 {
       font-size: clamp(1.6rem, 5vw, 2.2rem);
-      max-width: 100%;
       margin-bottom: 12px;
-      text-align: center;
     }
 
-    .hero-content p {
-      max-width: 100%;
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
+    .hero-content p { font-size: 0.95rem; opacity: 0.85; }
 
     main {
       max-width: 900px;
@@ -90,28 +77,15 @@
       padding: 24px 18px 60px;
     }
 
-    h2 {
-      margin-top: 26px;
-      margin-bottom: 10px;
-      font-size: 1.35rem;
-    }
+    h2 { margin-top: 26px; margin-bottom: 10px; font-size: 1.35rem; }
 
-    p, li {
-      font-size: 0.95rem;
-    }
+    p, li { font-size: 0.95rem; }
 
-    ul {
-      padding-left: 20px;
-      margin: 10px 0;
-    }
+    ul { padding-left: 20px; margin: 10px 0; }
 
-    li {
-      margin: 6px 0;
-    }
+    li { margin: 6px 0; }
 
-    .muted {
-      color: rgba(11,11,15,0.7);
-    }
+    .muted { color: rgba(11,11,15,0.7); }
 
     .meta {
       margin-top: 28px;
@@ -132,10 +106,7 @@
     }
 
     @media (prefers-color-scheme: dark) {
-      body {
-        background: #050505;
-        color: #e5e5e5;
-      }
+      body { background: #050505; color: #e5e5e5; }
       a { color: #4da3ff; }
       .hero-content {
         background: rgba(16,16,16,0.6);
@@ -160,12 +131,12 @@
   <div class="hero-content">
     <h1 class="lang-ru">Политика конфиденциальности</h1>
     <p class="lang-ru muted">
-      Настоящая политика описывает порядок обработки данных при посещении сайта joehacker.tech
+      Порядок обработки данных при использовании сайта joehacker.tech
     </p>
 
     <h1 class="lang-en" style="display:none;">Privacy Policy</h1>
     <p class="lang-en muted" style="display:none;">
-      This policy explains how data may be processed when visiting joehacker.tech
+      How data is processed when using joehacker.tech
     </p>
   </div>
 </header>
@@ -173,44 +144,128 @@
 <main>
   <div class="lang-ru">
     <h2>1. Общие положения</h2>
-    <p class="muted">Сайт не предназначен для сбора чувствительных персональных данных.</p>
+    <p class="muted">
+      Настоящая Политика конфиденциальности определяет порядок обработки информации,
+      получаемой при использовании сайта joehacker.tech.
+      Политика разработана в соответствии с ФЗ №152-ФЗ «О персональных данных»
+      и Общим регламентом ЕС по защите данных (GDPR).
+    </p>
 
-    <h2>2. Какие данные могут обрабатываться</h2>
+    <h2>2. Оператор персональных данных</h2>
+    <p class="muted">
+      Оператором персональных данных является владелец сайта joehacker.tech.
+      Обработка осуществляется исключительно в целях обеспечения работы сайта
+      и соблюдения требований законодательства.
+    </p>
+
+    <h2>3. Какие данные могут обрабатываться</h2>
     <ul class="muted">
       <li>IP-адрес;</li>
-      <li>тип браузера и ОС;</li>
-      <li>примерное местоположение;</li>
-      <li>дата и время запроса;</li>
-      <li>технические журналы.</li>
+      <li>тип браузера, версия ОС и устройства;</li>
+      <li>примерное географическое расположение (страна, регион);</li>
+      <li>дата и время доступа;</li>
+      <li>технические журналы сервера.</li>
+    </ul>
+    <p class="muted">
+      Сайт не предназначен для сбора специальных категорий персональных данных
+      (биометрических, медицинских, финансовых и т.д.).
+    </p>
+
+    <h2>4. Правовые основания обработки</h2>
+    <ul class="muted">
+      <li>законный интерес владельца сайта;</li>
+      <li>обеспечение корректной и безопасной работы сайта;</li>
+      <li>выполнение требований законодательства.</li>
     </ul>
 
-    <h2>3. Cookies</h2>
-    <p class="muted">Cookies используются только для корректной работы сайта.</p>
+    <h2>5. Cookies</h2>
+    <p class="muted">
+      Cookies используются исключительно для базовой функциональности сайта
+      и не применяются для идентификации пользователя.
+    </p>
 
-    <h2>4. Передача третьим лицам</h2>
-    <p class="muted">Данные не продаются и не передаются, кроме случаев, предусмотренных законом.</p>
+    <h2>6. Передача третьим лицам</h2>
+    <p class="muted">
+      Персональные данные не передаются третьим лицам,
+      за исключением случаев, предусмотренных законом.
+    </p>
+
+    <h2>7. Хранение и защита</h2>
+    <p class="muted">
+      Данные хранятся минимально необходимое время и защищаются
+      техническими и организационными мерами.
+    </p>
+
+    <h2>8. Права пользователя</h2>
+    <ul class="muted">
+      <li>получать информацию об обработке данных;</li>
+      <li>требовать уточнения или удаления;</li>
+      <li>ограничивать обработку;</li>
+      <li>обращаться в надзорные органы.</li>
+    </ul>
+
+    <h2>9. Изменения политики</h2>
+    <p class="muted">
+      Владелец сайта вправе вносить изменения в Политику.
+      Актуальная версия всегда доступна на данной странице.
+    </p>
 
     <div class="meta muted">Дата обновления: <strong>05.02.2026</strong></div>
   </div>
 
   <div class="lang-en" style="display:none;">
     <h2>1. General</h2>
-    <p class="muted">The Website is not intended to collect sensitive personal data.</p>
+    <p class="muted">
+      This Privacy Policy explains how data may be processed when using joehacker.tech,
+      in compliance with GDPR and applicable data protection laws.
+    </p>
 
-    <h2>2. Processed data</h2>
+    <h2>2. Data Controller</h2>
+    <p class="muted">
+      The data controller is the owner of joehacker.tech.
+    </p>
+
+    <h2>3. Processed data</h2>
     <ul class="muted">
       <li>IP address;</li>
-      <li>browser and OS;</li>
+      <li>browser, OS and device type;</li>
       <li>approximate location;</li>
-      <li>request time;</li>
+      <li>access time;</li>
       <li>technical logs.</li>
     </ul>
 
-    <h2>3. Cookies</h2>
-    <p class="muted">Cookies are used only for basic functionality.</p>
+    <h2>4. Legal basis</h2>
+    <p class="muted">
+      Processing is based on legitimate interest, technical necessity
+      and legal obligations.
+    </p>
 
-    <h2>4. Third parties</h2>
-    <p class="muted">Data is not sold or shared unless legally required.</p>
+    <h2>5. Cookies</h2>
+    <p class="muted">
+      Cookies are used only for essential website functionality.
+    </p>
+
+    <h2>6. Third parties</h2>
+    <p class="muted">
+      Data is not sold or shared unless required by law.
+    </p>
+
+    <h2>7. Storage and security</h2>
+    <p class="muted">
+      Data is stored only as long as necessary
+      and protected with reasonable security measures.
+    </p>
+
+    <h2>8. User rights</h2>
+    <p class="muted">
+      Users may access, rectify, erase or restrict processing
+      and lodge complaints with authorities.
+    </p>
+
+    <h2>9. Policy updates</h2>
+    <p class="muted">
+      This Policy may be updated at any time.
+    </p>
 
     <div class="meta muted">Last updated: <strong>2026-02-05</strong></div>
   </div>
