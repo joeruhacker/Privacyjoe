@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Политика конфиденциальности — Джо Хакер</title>
+  <title>Политика конфиденциальности — JoeHacker.tech</title>
 
   <!-- Иконки и манифест (как на основном сайте) -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -30,8 +30,6 @@
       -moz-osx-font-smoothing: grayscale;
     }
     a { text-decoration: none; color: #007aff; }
-
-    /* Кнопка переключения языка */
     #lang-toggle {
       position: fixed;
       top: 20px;
@@ -45,8 +43,6 @@
       z-index: 100;
       font-size: 1rem;
     }
-
-    /* Мини-хедер в стиле сайта (без full-screen hero) */
     header {
       position: relative;
       padding: 70px 20px 30px;
@@ -72,74 +68,34 @@
       margin: 0 auto;
       opacity: 0.9;
     }
-
-    /* Секции */
-    section {
-      padding: 30px 20px;
-      max-width: 1200px;
+    main {
+      padding: 30px 20px 60px;
+      max-width: 900px;
       margin: 0 auto;
     }
-    .section-title {
-      text-align: center;
-      margin-bottom: 18px;
-      font-size: 1.6rem;
+    h2 {
+      margin-top: 26px;
+      margin-bottom: 10px;
+      font-size: 1.35rem;
     }
-
-    /* Карточки в стиле skills */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
+    h3 {
       margin-top: 18px;
-    }
-    .card {
-      border-radius: 16px;
-      padding: 18px;
-      background: rgba(255, 255, 255, 0.60);
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    }
-    .card h3 {
       margin-bottom: 8px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
-    .card ul {
-      padding-left: 18px;
-      margin-top: 8px;
-    }
+    p { margin: 10px 0; }
+    ul { padding-left: 20px; margin: 10px 0; }
+    li { margin: 6px 0; }
     .muted {
       color: rgba(11, 11, 15, 0.70);
       font-size: 0.95rem;
     }
-
-    /* Кнопки в стиле contact-buttons */
-    .contact-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 16px;
+    .meta {
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      text-align: center;
     }
-    .contact-buttons a {
-      color: #0b0b0f;
-      border: 1px solid rgba(0, 0, 0, 0.10);
-      padding: 10px 18px;
-      border-radius: 999px;
-      transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
-      font-size: 1rem;
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
-    .contact-buttons a:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 14px 34px rgba(0,0,0,0.10);
-    }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -150,8 +106,6 @@
       -webkit-backdrop-filter: blur(12px);
       margin-top: 30px;
     }
-
-    /* Автоматическая тёмная тема (как на сайте) */
     @media (prefers-color-scheme: dark) {
       body {
         background: radial-gradient(1200px 800px at 20% 10%, rgba(77, 163, 255, 0.18), transparent 60%),
@@ -166,27 +120,14 @@
         border-color: rgba(255, 255, 255, 0.12);
         box-shadow: 0 20px 60px rgba(0,0,0,0.35);
       }
-      .card {
-        background-color: rgba(20, 20, 20, 0.55);
-        border: 1px solid rgba(255, 255, 255, 0.10);
-        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
-      }
       .muted { color: rgba(229, 229, 229, 0.70); }
-      .contact-buttons a {
-        color: #4da3ff;
-        border-color: #4da3ff;
-        background-color: transparent;
-      }
-      .contact-buttons a:hover {
-        background-color: #4da3ff;
-        color: #000;
-      }
       footer {
         background-color: rgba(16, 16, 16, 0.55);
         color: rgba(229, 229, 229, 0.70);
         border-top-color: rgba(255, 255, 255, 0.10);
       }
       #lang-toggle { background-color: #4da3ff; color: #000; }
+      .meta { border-top-color: rgba(255, 255, 255, 0.12); }
     }
   </style>
 </head>
@@ -199,260 +140,176 @@
     <div class="hero-content">
       <h1 class="lang-ru">Политика конфиденциальности</h1>
       <p class="lang-ru muted">
-        Эта страница описывает, как обрабатывается информация при посещении сайта <span class="nowrap">joehacker.tech</span>.
+        Настоящая политика конфиденциальности описывает, какие данные могут обрабатываться при посещении сайта
+        <span class="nowrap">joehacker.tech</span>, а также цели и порядок такой обработки.
       </p>
 
       <h1 class="lang-en" style="display:none;">Privacy Policy</h1>
       <p class="lang-en muted" style="display:none;">
-        This page describes how information may be processed when you use <span class="nowrap">joehacker.tech</span>.
+        This Privacy Policy describes what data may be processed when you visit
+        <span class="nowrap">joehacker.tech</span>, and for what purposes.
       </p>
-
-      <div class="contact-buttons">
-        <a href="/" class="lang-ru">На главную</a>
-        <a href="/" class="lang-en" style="display:none;">Home</a>
-        <a href="https://t.me/joe_hacker" target="_blank">Telegram</a>
-      </div>
     </div>
   </header>
 
-  <section>
-    <h2 class="section-title lang-ru">Коротко</h2>
-    <h2 class="section-title lang-en" style="display:none;">In short</h2>
+  <main>
+    <div class="lang-ru">
+      <h2>1. Общие положения</h2>
+      <p class="muted">
+        Под «данными» в рамках этой политики понимаются сведения, которые могут относиться к посетителю сайта
+        прямо или косвенно. Сайт не предназначен для целенаправленного сбора чувствительных персональных данных.
+      </p>
 
-    <div class="cards">
-      <div class="card">
-        <h3 class="lang-ru">Что я собираю</h3>
-        <p class="lang-ru muted">
-          Минимум технических данных для работы сайта и безопасности (например, IP, время запроса, тип браузера).
-        </p>
+      <h2>2. Какие данные могут обрабатываться</h2>
+      <p class="muted">
+        При обычной работе сайта автоматически могут обрабатываться ограниченные технические сведения:
+      </p>
+      <ul class="muted">
+        <li>IP-адрес;</li>
+        <li>тип/версия браузера и операционной системы;</li>
+        <li>примерное местоположение (страна/регион);</li>
+        <li>дата и время запроса;</li>
+        <li>технические журналы ошибок и безопасности.</li>
+      </ul>
 
-        <h3 class="lang-en" style="display:none;">What is collected</h3>
-        <p class="lang-en muted" style="display:none;">
-          Minimal technical data for website operation and security (e.g., IP, request time, browser type).
-        </p>
-      </div>
+      <h2>3. Какие данные не собираются</h2>
+      <p class="muted">Сайт не запрашивает и не хранит:</p>
+      <ul class="muted">
+        <li>паспортные и иные государственные идентификаторы;</li>
+        <li>биометрические данные;</li>
+        <li>данные банковских карт (если на сайте появляется оплата, она осуществляется через сторонние сервисы);</li>
+        <li>специальные категории персональных данных.</li>
+      </ul>
 
-      <div class="card">
-        <h3 class="lang-ru">Что я не собираю</h3>
-        <p class="lang-ru muted">
-          Я не запрашиваю паспортные данные, биометрию и не храню данные банковских карт.
-        </p>
+      <h2>4. Cookies</h2>
+      <p class="muted">
+        Сайт может использовать cookies и аналогичные технологии, необходимые для корректной работы,
+        а также для базовой аналитики и защиты. Вы можете отключить cookies в настройках браузера,
+        но это может повлиять на работоспособность отдельных функций.
+      </p>
 
-        <h3 class="lang-en" style="display:none;">What is NOT collected</h3>
-        <p class="lang-en muted" style="display:none;">
-          I do not request passport data, biometrics, or store bank card details.
-        </p>
-      </div>
+      <h2>5. Цели обработки</h2>
+      <p class="muted">Данные могут обрабатываться для следующих целей:</p>
+      <ul class="muted">
+        <li>обеспечение функционирования сайта;</li>
+        <li>обеспечение безопасности и предотвращение злоупотреблений;</li>
+        <li>диагностика ошибок и улучшение качества работы.</li>
+      </ul>
 
-      <div class="card">
-        <h3 class="lang-ru">С кем делюсь</h3>
-        <p class="lang-ru muted">
-          Не продаю данные. Передача возможна только по закону или для технической работы сайта (хостинг/защита).
-        </p>
+      <h2>6. Передача третьим лицам</h2>
+      <p class="muted">
+        Данные не продаются и не передаются третьим лицам, за исключением случаев, когда:
+        (a) это требуется законом; или (b) это необходимо для технической работы сайта
+        (например, услуги хостинга, защита от атак, доставка контента).
+      </p>
 
-        <h3 class="lang-en" style="display:none;">Sharing</h3>
-        <p class="lang-en muted" style="display:none;">
-          No selling of data. Sharing may occur only if required by law or for website operation (hosting/security).
-        </p>
-      </div>
-    </div>
-  </section>
+      <h2>7. Хранение и защита</h2>
+      <p class="muted">
+        Применяются разумные технические и организационные меры защиты. При этом ни один способ передачи
+        данных через Интернет не является полностью безопасным.
+      </p>
 
-  <section>
-    <h2 class="section-title lang-ru">Полная версия</h2>
-    <h2 class="section-title lang-en" style="display:none;">Full version</h2>
+      <h2>8. Сторонние ресурсы</h2>
+      <p class="muted">
+        Сайт может содержать ссылки на сторонние ресурсы. Я не контролирую и не отвечаю за их содержание
+        и политику конфиденциальности.
+      </p>
 
-    <div class="cards">
-      <div class="card">
-        <h3 class="lang-ru">1) Общие положения</h3>
-        <p class="lang-ru muted">
-          Настоящая политика описывает обработку информации при использовании сайта <strong>joehacker.tech</strong>
-          (“Сайт”). Используя Сайт, вы соглашаетесь с этой Политикой.
-        </p>
+      <h2>9. Изменения политики</h2>
+      <p class="muted">
+        Политика может обновляться. Актуальная версия всегда размещена на этой странице.
+      </p>
 
-        <h3 class="lang-en" style="display:none;">1) General</h3>
-        <p class="lang-en muted" style="display:none;">
-          This Policy describes how information may be processed when using <strong>joehacker.tech</strong>
-          (the “Website”). By using the Website, you agree to this Policy.
-        </p>
-      </div>
+      <h2>10. Контакты</h2>
+      <p class="muted">
+        По вопросам, связанным с этой политикой, можно связаться с владельцем сайта через контактные данные,
+        указанные на сайте.
+      </p>
 
-      <div class="card">
-        <h3 class="lang-ru">2) Правовая основа</h3>
-        <p class="lang-ru muted">
-          Политика подготовлена с учётом требований применимого законодательства о персональных данных,
-          включая Федеральный закон РФ №152-ФЗ «О персональных данных».
-        </p>
-
-        <h3 class="lang-en" style="display:none;">2) Legal basis</h3>
-        <p class="lang-en muted" style="display:none;">
-          This Policy is prepared with regard to applicable personal data regulations, including
-          the Russian Federal Law No. 152-FZ “On Personal Data”.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">3) Какие данные могут обрабатываться</h3>
-        <p class="lang-ru muted">
-          При обычной работе Сайта могут автоматически обрабатываться ограниченные технические сведения:
-        </p>
-        <ul class="lang-ru muted">
-          <li>IP-адрес</li>
-          <li>тип/версия браузера и ОС</li>
-          <li>примерное местоположение (страна/регион)</li>
-          <li>дата и время доступа</li>
-          <li>технические журналы ошибок и безопасности</li>
-        </ul>
-
-        <h3 class="lang-en" style="display:none;">3) Information that may be processed</h3>
-        <p class="lang-en muted" style="display:none;">
-          During normal operation, limited technical data may be processed automatically:
-        </p>
-        <ul class="lang-en muted" style="display:none;">
-          <li>IP address</li>
-          <li>browser/OS type and version</li>
-          <li>approximate location (country/region)</li>
-          <li>date and time of access</li>
-          <li>technical security/error logs</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">4) Какие данные не собираются</h3>
-        <p class="lang-ru muted">
-          Сайт не предназначен для сбора и хранения:
-        </p>
-        <ul class="lang-ru muted">
-          <li>паспортных и иных государственных идентификаторов</li>
-          <li>биометрических данных</li>
-          <li>данных банковских карт (оплата, если есть, проходит через сторонние сервисы)</li>
-          <li>специальных категорий персональных данных</li>
-        </ul>
-
-        <h3 class="lang-en" style="display:none;">4) Information we do NOT collect</h3>
-        <p class="lang-en muted" style="display:none;">
-          The Website is not intended to collect or store:
-        </p>
-        <ul class="lang-en muted" style="display:none;">
-          <li>passport or government identifiers</li>
-          <li>biometrics</li>
-          <li>bank card details (payments, if any, are processed by third parties)</li>
-          <li>special categories of personal data</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">5) Cookies</h3>
-        <p class="lang-ru muted">
-          Сайт может использовать cookies и аналогичные технологии, необходимые для корректной работы,
-          а также для базовой аналитики и защиты. Вы можете отключить cookies в настройках браузера.
-        </p>
-
-        <h3 class="lang-en" style="display:none;">5) Cookies</h3>
-        <p class="lang-en muted" style="display:none;">
-          The Website may use cookies or similar technologies necessary for proper operation,
-          basic analytics, and security. You can disable cookies in your browser settings.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">6) Цели обработки</h3>
-        <ul class="lang-ru muted">
-          <li>обеспечение работы Сайта</li>
-          <li>безопасность и предотвращение злоупотреблений</li>
-          <li>диагностика ошибок и улучшение качества</li>
-        </ul>
-
-        <h3 class="lang-en" style="display:none;">6) Purposes</h3>
-        <ul class="lang-en muted" style="display:none;">
-          <li>to operate the Website</li>
-          <li>to maintain security and prevent abuse</li>
-          <li>to diagnose errors and improve quality</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">7) Передача третьим лицам</h3>
-        <p class="lang-ru muted">
-          Данные не продаются и не передаются третьим лицам, кроме случаев:
-          (a) когда это требуется законом, или
-          (b) когда это необходимо для технической работы Сайта (хостинг, защита от атак, доставка контента).
-        </p>
-
-        <h3 class="lang-en" style="display:none;">7) Sharing</h3>
-        <p class="lang-en muted" style="display:none;">
-          Data is not sold or shared, except when:
-          (a) required by law, or
-          (b) necessary for Website operation (hosting, security, content delivery).
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">8) Защита данных</h3>
-        <p class="lang-ru muted">
-          Применяются разумные технические и организационные меры защиты. При этом ни один способ передачи
-          данных через Интернет не является полностью безопасным.
-        </p>
-
-        <h3 class="lang-en" style="display:none;">8) Security</h3>
-        <p class="lang-en muted" style="display:none;">
-          Reasonable technical and organizational measures are used. However, no Internet transmission method
-          is 100% secure.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">9) Ссылки на сторонние сайты</h3>
-        <p class="lang-ru muted">
-          Сайт может содержать ссылки на сторонние ресурсы. Я не контролирую и не отвечаю за их политику
-          конфиденциальности и содержимое.
-        </p>
-
-        <h3 class="lang-en" style="display:none;">9) External links</h3>
-        <p class="lang-en muted" style="display:none;">
-          The Website may include links to third-party resources. I do not control and am not responsible for
-          their privacy practices or content.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">10) Изменения политики</h3>
-        <p class="lang-ru muted">
-          Политика может обновляться без предварительного уведомления. Актуальная версия всегда размещена
-          на этой странице.
-        </p>
-
-        <h3 class="lang-en" style="display:none;">10) Changes</h3>
-        <p class="lang-en muted" style="display:none;">
-          This Policy may be updated without prior notice. The current version is always available on this page.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="lang-ru">11) Контакты</h3>
-        <p class="lang-ru muted">
-          По вопросам этой политики можно написать в Telegram:
-          <a href="https://t.me/joe_hacker" target="_blank" rel="noopener noreferrer">@joe_hacker</a>
-        </p>
-
-        <h3 class="lang-en" style="display:none;">11) Contact</h3>
-        <p class="lang-en muted" style="display:none;">
-          If you have questions about this Policy, contact via Telegram:
-          <a href="https://t.me/joe_hacker" target="_blank" rel="noopener noreferrer">@joe_hacker</a>
-        </p>
+      <div class="meta muted">
+        Дата обновления: <strong>05.02.2026</strong>
       </div>
     </div>
 
-    <p class="lang-ru muted" style="text-align:center; margin-top: 18px;">
-      Дата обновления: <strong>05.02.2026</strong>
-    </p>
-    <p class="lang-en muted" style="display:none; text-align:center; margin-top: 18px;">
-      Last updated: <strong>2026-02-05</strong>
-    </p>
-  </section>
+    <div class="lang-en" style="display:none;">
+      <h2>1. General</h2>
+      <p class="muted">
+        In this Policy, “data” means information that may relate to a website visitor directly or indirectly.
+        The Website is not intended for the purposeful collection of sensitive personal data.
+      </p>
+
+      <h2>2. Data that may be processed</h2>
+      <p class="muted">During normal operation, limited technical data may be processed automatically:</p>
+      <ul class="muted">
+        <li>IP address;</li>
+        <li>browser and operating system type/version;</li>
+        <li>approximate location (country/region);</li>
+        <li>date and time of the request;</li>
+        <li>technical security and error logs.</li>
+      </ul>
+
+      <h2>3. Data we do NOT collect</h2>
+      <p class="muted">The Website does not request or store:</p>
+      <ul class="muted">
+        <li>passport or other government identifiers;</li>
+        <li>biometrics;</li>
+        <li>bank card details (if payments appear on the Website, they are processed by third parties);</li>
+        <li>special categories of personal data.</li>
+      </ul>
+
+      <h2>4. Cookies</h2>
+      <p class="muted">
+        The Website may use cookies or similar technologies necessary for proper operation,
+        basic analytics, and security. You can disable cookies in your browser settings,
+        but this may affect certain features.
+      </p>
+
+      <h2>5. Purposes</h2>
+      <p class="muted">Data may be processed for the following purposes:</p>
+      <ul class="muted">
+        <li>to operate the Website;</li>
+        <li>to maintain security and prevent abuse;</li>
+        <li>to diagnose errors and improve quality.</li>
+      </ul>
+
+      <h2>6. Sharing with third parties</h2>
+      <p class="muted">
+        Data is not sold or shared, except when:
+        (a) required by law; or (b) necessary for Website operation
+        (e.g., hosting services, attack protection, content delivery).
+      </p>
+
+      <h2>7. Storage and security</h2>
+      <p class="muted">
+        Reasonable technical and organizational measures are used. However, no Internet transmission method
+        is 100% secure.
+      </p>
+
+      <h2>8. External resources</h2>
+      <p class="muted">
+        The Website may include links to third-party resources. I do not control and am not responsible for
+        their content or privacy practices.
+      </p>
+
+      <h2>9. Changes</h2>
+      <p class="muted">
+        This Policy may be updated. The current version is always available on this page.
+      </p>
+
+      <h2>10. Contact</h2>
+      <p class="muted">
+        If you have questions about this Policy, please contact the Website owner using the contact details
+        provided on the Website.
+      </p>
+
+      <div class="meta muted">
+        Last updated: <strong>2026-02-05</strong>
+      </div>
+    </div>
+  </main>
 
   <footer>
-    <p class="lang-ru">&copy; 2026 Джо Хакер. Все права защищены.</p>
+    <p class="lang-ru">&copy; 2026 Joe Hacker. Все права защищены.</p>
     <p class="lang-en" style="display:none;">&copy; 2026 Joe Hacker. All rights reserved.</p>
   </footer>
 
