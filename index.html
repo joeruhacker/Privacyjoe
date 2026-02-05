@@ -5,19 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Политика конфиденциальности — JoeHacker.tech</title>
 
-  <!-- Иконки и манифест (как на основном сайте) -->
+  <!-- Иконки -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
   <style>
-    /* Сброс стилей */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: radial-gradient(1200px 800px at 20% 10%, rgba(0, 122, 255, 0.18), transparent 60%),
@@ -26,316 +31,217 @@
                   #f6f7fb;
       color: #0b0b0f;
       line-height: 1.6;
+      word-break: break-word;
+      overflow-wrap: anywhere;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
-    a { text-decoration: none; color: #007aff; }
+
+    a { color: #007aff; text-decoration: none; }
+
     #lang-toggle {
       position: fixed;
-      top: 20px;
-      right: 20px;
+      top: 16px;
+      right: 16px;
       background: #007aff;
       color: #fff;
       border: none;
-      border-radius: 30px;
-      padding: 10px 15px;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
       cursor: pointer;
       z-index: 100;
-      font-size: 1rem;
     }
+
     header {
-      position: relative;
-      padding: 70px 20px 30px;
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 80px 16px 32px;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+      padding: 24px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+
+    .hero-content h1 {
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      max-width: 100%;
+      margin-bottom: 12px;
       text-align: center;
     }
-    .hero-content {
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.10);
-      padding: 22px;
-    }
-    .hero-content h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
+
     .hero-content p {
-      max-width: 900px;
-      margin: 0 auto;
-      opacity: 0.9;
+      max-width: 100%;
+      font-size: 0.95rem;
+      opacity: 0.85;
     }
+
     main {
-      padding: 30px 20px 60px;
       max-width: 900px;
       margin: 0 auto;
+      padding: 24px 18px 60px;
     }
+
     h2 {
       margin-top: 26px;
       margin-bottom: 10px;
       font-size: 1.35rem;
     }
-    h3 {
-      margin-top: 18px;
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-    }
-    p { margin: 10px 0; }
-    ul { padding-left: 20px; margin: 10px 0; }
-    li { margin: 6px 0; }
-    .muted {
-      color: rgba(11, 11, 15, 0.70);
+
+    p, li {
       font-size: 0.95rem;
     }
-    .meta {
-      margin-top: 22px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(0, 0, 0, 0.06);
-      text-align: center;
+
+    ul {
+      padding-left: 20px;
+      margin: 10px 0;
     }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .muted {
+      color: rgba(11,11,15,0.7);
+    }
+
+    .meta {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.55);
-      color: rgba(11, 11, 15, 0.65);
-      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      background: rgba(255,255,255,0.55);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      margin-top: 30px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.85rem;
+      color: rgba(11,11,15,0.65);
     }
+
     @media (prefers-color-scheme: dark) {
       body {
-        background: radial-gradient(1200px 800px at 20% 10%, rgba(77, 163, 255, 0.18), transparent 60%),
-                    radial-gradient(900px 600px at 80% 30%, rgba(191, 90, 242, 0.14), transparent 55%),
-                    radial-gradient(900px 700px at 40% 90%, rgba(48, 209, 88, 0.12), transparent 60%),
-                    #050505;
+        background: #050505;
         color: #e5e5e5;
       }
       a { color: #4da3ff; }
       .hero-content {
-        background: rgba(16, 16, 16, 0.55);
-        border-color: rgba(255, 255, 255, 0.12);
-        box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+        background: rgba(16,16,16,0.6);
+        border-color: rgba(255,255,255,0.12);
       }
-      .muted { color: rgba(229, 229, 229, 0.70); }
+      .muted { color: rgba(229,229,229,0.7); }
       footer {
-        background-color: rgba(16, 16, 16, 0.55);
-        color: rgba(229, 229, 229, 0.70);
-        border-top-color: rgba(255, 255, 255, 0.10);
+        background: rgba(16,16,16,0.6);
+        color: rgba(229,229,229,0.7);
       }
-      #lang-toggle { background-color: #4da3ff; color: #000; }
-      .meta { border-top-color: rgba(255, 255, 255, 0.12); }
+      #lang-toggle { background: #4da3ff; color: #000; }
+      .meta { border-top-color: rgba(255,255,255,0.15); }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Кнопка переключения языка -->
-  <button id="lang-toggle" data-lang="ru">EN</button>
+<button id="lang-toggle" data-lang="ru">EN</button>
 
-  <header>
-    <div class="hero-content">
-      <h1 class="lang-ru">Политика конфиденциальности</h1>
-      <p class="lang-ru muted">
-        Настоящая политика конфиденциальности описывает, какие данные могут обрабатываться при посещении сайта
-        <span class="nowrap">joehacker.tech</span>, а также цели и порядок такой обработки.
-      </p>
+<header>
+  <div class="hero-content">
+    <h1 class="lang-ru">Политика конфиденциальности</h1>
+    <p class="lang-ru muted">
+      Настоящая политика описывает порядок обработки данных при посещении сайта joehacker.tech
+    </p>
 
-      <h1 class="lang-en" style="display:none;">Privacy Policy</h1>
-      <p class="lang-en muted" style="display:none;">
-        This Privacy Policy describes what data may be processed when you visit
-        <span class="nowrap">joehacker.tech</span>, and for what purposes.
-      </p>
-    </div>
-  </header>
+    <h1 class="lang-en" style="display:none;">Privacy Policy</h1>
+    <p class="lang-en muted" style="display:none;">
+      This policy explains how data may be processed when visiting joehacker.tech
+    </p>
+  </div>
+</header>
 
-  <main>
-    <div class="lang-ru">
-      <h2>1. Общие положения</h2>
-      <p class="muted">
-        Под «данными» в рамках этой политики понимаются сведения, которые могут относиться к посетителю сайта
-        прямо или косвенно. Сайт не предназначен для целенаправленного сбора чувствительных персональных данных.
-      </p>
+<main>
+  <div class="lang-ru">
+    <h2>1. Общие положения</h2>
+    <p class="muted">Сайт не предназначен для сбора чувствительных персональных данных.</p>
 
-      <h2>2. Какие данные могут обрабатываться</h2>
-      <p class="muted">
-        При обычной работе сайта автоматически могут обрабатываться ограниченные технические сведения:
-      </p>
-      <ul class="muted">
-        <li>IP-адрес;</li>
-        <li>тип/версия браузера и операционной системы;</li>
-        <li>примерное местоположение (страна/регион);</li>
-        <li>дата и время запроса;</li>
-        <li>технические журналы ошибок и безопасности.</li>
-      </ul>
+    <h2>2. Какие данные могут обрабатываться</h2>
+    <ul class="muted">
+      <li>IP-адрес;</li>
+      <li>тип браузера и ОС;</li>
+      <li>примерное местоположение;</li>
+      <li>дата и время запроса;</li>
+      <li>технические журналы.</li>
+    </ul>
 
-      <h2>3. Какие данные не собираются</h2>
-      <p class="muted">Сайт не запрашивает и не хранит:</p>
-      <ul class="muted">
-        <li>паспортные и иные государственные идентификаторы;</li>
-        <li>биометрические данные;</li>
-        <li>данные банковских карт (если на сайте появляется оплата, она осуществляется через сторонние сервисы);</li>
-        <li>специальные категории персональных данных.</li>
-      </ul>
+    <h2>3. Cookies</h2>
+    <p class="muted">Cookies используются только для корректной работы сайта.</p>
 
-      <h2>4. Cookies</h2>
-      <p class="muted">
-        Сайт может использовать cookies и аналогичные технологии, необходимые для корректной работы,
-        а также для базовой аналитики и защиты. Вы можете отключить cookies в настройках браузера,
-        но это может повлиять на работоспособность отдельных функций.
-      </p>
+    <h2>4. Передача третьим лицам</h2>
+    <p class="muted">Данные не продаются и не передаются, кроме случаев, предусмотренных законом.</p>
 
-      <h2>5. Цели обработки</h2>
-      <p class="muted">Данные могут обрабатываться для следующих целей:</p>
-      <ul class="muted">
-        <li>обеспечение функционирования сайта;</li>
-        <li>обеспечение безопасности и предотвращение злоупотреблений;</li>
-        <li>диагностика ошибок и улучшение качества работы.</li>
-      </ul>
+    <div class="meta muted">Дата обновления: <strong>05.02.2026</strong></div>
+  </div>
 
-      <h2>6. Передача третьим лицам</h2>
-      <p class="muted">
-        Данные не продаются и не передаются третьим лицам, за исключением случаев, когда:
-        (a) это требуется законом; или (b) это необходимо для технической работы сайта
-        (например, услуги хостинга, защита от атак, доставка контента).
-      </p>
+  <div class="lang-en" style="display:none;">
+    <h2>1. General</h2>
+    <p class="muted">The Website is not intended to collect sensitive personal data.</p>
 
-      <h2>7. Хранение и защита</h2>
-      <p class="muted">
-        Применяются разумные технические и организационные меры защиты. При этом ни один способ передачи
-        данных через Интернет не является полностью безопасным.
-      </p>
+    <h2>2. Processed data</h2>
+    <ul class="muted">
+      <li>IP address;</li>
+      <li>browser and OS;</li>
+      <li>approximate location;</li>
+      <li>request time;</li>
+      <li>technical logs.</li>
+    </ul>
 
-      <h2>8. Сторонние ресурсы</h2>
-      <p class="muted">
-        Сайт может содержать ссылки на сторонние ресурсы. Я не контролирую и не отвечаю за их содержание
-        и политику конфиденциальности.
-      </p>
+    <h2>3. Cookies</h2>
+    <p class="muted">Cookies are used only for basic functionality.</p>
 
-      <h2>9. Изменения политики</h2>
-      <p class="muted">
-        Политика может обновляться. Актуальная версия всегда размещена на этой странице.
-      </p>
+    <h2>4. Third parties</h2>
+    <p class="muted">Data is not sold or shared unless legally required.</p>
 
-      <h2>10. Контакты</h2>
-      <p class="muted">
-        По вопросам, связанным с этой политикой, можно связаться с владельцем сайта через контактные данные,
-        указанные на сайте.
-      </p>
+    <div class="meta muted">Last updated: <strong>2026-02-05</strong></div>
+  </div>
+</main>
 
-      <div class="meta muted">
-        Дата обновления: <strong>05.02.2026</strong>
-      </div>
-    </div>
+<footer>
+  <p class="lang-ru">© 2026 Joe Hacker. Все права защищены.</p>
+  <p class="lang-en" style="display:none;">© 2026 Joe Hacker. All rights reserved.</p>
+</footer>
 
-    <div class="lang-en" style="display:none;">
-      <h2>1. General</h2>
-      <p class="muted">
-        In this Policy, “data” means information that may relate to a website visitor directly or indirectly.
-        The Website is not intended for the purposeful collection of sensitive personal data.
-      </p>
+<script>
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    const ru = document.querySelectorAll('.lang-ru');
+    const en = document.querySelectorAll('.lang-en');
+    const btn = document.getElementById('lang-toggle');
 
-      <h2>2. Data that may be processed</h2>
-      <p class="muted">During normal operation, limited technical data may be processed automatically:</p>
-      <ul class="muted">
-        <li>IP address;</li>
-        <li>browser and operating system type/version;</li>
-        <li>approximate location (country/region);</li>
-        <li>date and time of the request;</li>
-        <li>technical security and error logs.</li>
-      </ul>
-
-      <h2>3. Data we do NOT collect</h2>
-      <p class="muted">The Website does not request or store:</p>
-      <ul class="muted">
-        <li>passport or other government identifiers;</li>
-        <li>biometrics;</li>
-        <li>bank card details (if payments appear on the Website, they are processed by third parties);</li>
-        <li>special categories of personal data.</li>
-      </ul>
-
-      <h2>4. Cookies</h2>
-      <p class="muted">
-        The Website may use cookies or similar technologies necessary for proper operation,
-        basic analytics, and security. You can disable cookies in your browser settings,
-        but this may affect certain features.
-      </p>
-
-      <h2>5. Purposes</h2>
-      <p class="muted">Data may be processed for the following purposes:</p>
-      <ul class="muted">
-        <li>to operate the Website;</li>
-        <li>to maintain security and prevent abuse;</li>
-        <li>to diagnose errors and improve quality.</li>
-      </ul>
-
-      <h2>6. Sharing with third parties</h2>
-      <p class="muted">
-        Data is not sold or shared, except when:
-        (a) required by law; or (b) necessary for Website operation
-        (e.g., hosting services, attack protection, content delivery).
-      </p>
-
-      <h2>7. Storage and security</h2>
-      <p class="muted">
-        Reasonable technical and organizational measures are used. However, no Internet transmission method
-        is 100% secure.
-      </p>
-
-      <h2>8. External resources</h2>
-      <p class="muted">
-        The Website may include links to third-party resources. I do not control and am not responsible for
-        their content or privacy practices.
-      </p>
-
-      <h2>9. Changes</h2>
-      <p class="muted">
-        This Policy may be updated. The current version is always available on this page.
-      </p>
-
-      <h2>10. Contact</h2>
-      <p class="muted">
-        If you have questions about this Policy, please contact the Website owner using the contact details
-        provided on the Website.
-      </p>
-
-      <div class="meta muted">
-        Last updated: <strong>2026-02-05</strong>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <p class="lang-ru">&copy; 2026 Joe Hacker. Все права защищены.</p>
-    <p class="lang-en" style="display:none;">&copy; 2026 Joe Hacker. All rights reserved.</p>
-  </footer>
-
-  <!-- Скрипт переключения языка (в стиле сайта) -->
-  <script>
-    function toggleLanguage() {
-      const ruElements = document.querySelectorAll('.lang-ru');
-      const enElements = document.querySelectorAll('.lang-en');
-      const toggleBtn = document.getElementById('lang-toggle');
-
-      if (toggleBtn.dataset.lang === 'ru') {
-        ruElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = 'block');
-        toggleBtn.textContent = 'RU';
-        toggleBtn.dataset.lang = 'en';
-        document.documentElement.lang = 'en';
-      } else {
-        ruElements.forEach(el => el.style.display = 'block');
-        enElements.forEach(el => el.style.display = 'none');
-        toggleBtn.textContent = 'EN';
-        toggleBtn.dataset.lang = 'ru';
-        document.documentElement.lang = 'ru';
-      }
+    if (btn.dataset.lang === 'ru') {
+      ru.forEach(e => e.style.display = 'none');
+      en.forEach(e => e.style.display = 'block');
+      btn.textContent = 'RU';
+      btn.dataset.lang = 'en';
+      document.documentElement.lang = 'en';
+    } else {
+      ru.forEach(e => e.style.display = 'block');
+      en.forEach(e => e.style.display = 'none');
+      btn.textContent = 'EN';
+      btn.dataset.lang = 'ru';
+      document.documentElement.lang = 'ru';
     }
-    document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
-  </script>
+  });
+</script>
 
 </body>
 </html>
